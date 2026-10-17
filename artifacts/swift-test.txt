@@ -1,0 +1,82 @@
+# swift test — TaskProcessor (HW2)
+# date: 2026-10-17 23:12:13 EEST
+# toolchain: swift-driver version: 1.168.6 Apple Swift version 6.4 (swiftlang-6.4.0.34.1 clang-2100.3.34.1)
+# developer dir: /Applications/Xcode.app/Contents/Developer
+# command: swift test
+
+Building for debugging...
+Build complete! (0,16 sec)
+Test Suite 'All tests' started at 2026-10-17 23:12:13.962.
+Test Suite 'TaskProcessorTests.xctest' started at 2026-10-17 23:12:13.968.
+Test Suite 'TaskProcessorCancellationTests' started at 2026-10-17 23:12:13.968.
+Test Case '-[TaskProcessorTests.TaskProcessorCancellationTests testCancellationCancelsRunningAndNeverStartedJobs]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorCancellationTests testCancellationCancelsRunningAndNeverStartedJobs]' passed (0.001 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorCancellationTests testResultsCompletedBeforeCancellationKeepTheirOutcome]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorCancellationTests testResultsCompletedBeforeCancellationKeepTheirOutcome]' passed (0.000 seconds).
+Test Suite 'TaskProcessorCancellationTests' passed at 2026-10-17 23:12:13.969.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'TaskProcessorOrderingTests' started at 2026-10-17 23:12:13.969.
+Test Case '-[TaskProcessorTests.TaskProcessorOrderingTests testResultsKeepInputOrderWhenCompletionIsFullyReversed]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorOrderingTests testResultsKeepInputOrderWhenCompletionIsFullyReversed]' passed (0.000 seconds).
+Test Suite 'TaskProcessorOrderingTests' passed at 2026-10-17 23:12:13.969.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'TaskProcessorOutcomeTests' started at 2026-10-17 23:12:13.969.
+Test Case '-[TaskProcessorTests.TaskProcessorOutcomeTests testEachOutcomeIsMappedPerJobWhileOtherJobsContinue]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorOutcomeTests testEachOutcomeIsMappedPerJobWhileOtherJobsContinue]' passed (0.000 seconds).
+Test Suite 'TaskProcessorOutcomeTests' passed at 2026-10-17 23:12:13.970.
+	 Executed 1 test, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'TaskProcessorPublicTests' started at 2026-10-17 23:12:13.970.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testEmptyJobListReturnsEmptyWithoutCallingWorker]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testEmptyJobListReturnsEmptyWithoutCallingWorker]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testOneSuccessfulJob]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testOneSuccessfulJob]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testOrdinaryWorkerErrorBecomesFailedOutcome]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testOrdinaryWorkerErrorBecomesFailedOutcome]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testResultsKeepInputOrderWhenSecondJobPassesGateFirst]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testResultsKeepInputOrderWhenSecondJobPassesGateFirst]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testZeroMaximumConcurrencyIsRejected]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorPublicTests testZeroMaximumConcurrencyIsRejected]' passed (0.000 seconds).
+Test Suite 'TaskProcessorPublicTests' passed at 2026-10-17 23:12:13.971.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'TaskProcessorRetryCancellationTests' started at 2026-10-17 23:12:13.971.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryCancellationTests testCallerCancellationStopsRetriesAndQueuedJobs]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryCancellationTests testCallerCancellationStopsRetriesAndQueuedJobs]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorRetryCancellationTests testCancellationErrorIsNeverRetried]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryCancellationTests testCancellationErrorIsNeverRetried]' passed (0.000 seconds).
+Test Suite 'TaskProcessorRetryCancellationTests' passed at 2026-10-17 23:12:13.971.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.001) seconds
+Test Suite 'TaskProcessorRetryTests' started at 2026-10-17 23:12:13.971.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testNonPositiveMaximumAttemptsIsRejected]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testNonPositiveMaximumAttemptsIsRejected]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testOrdinaryErrorOnTheFinalAttemptBecomesFailed]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testOrdinaryErrorOnTheFinalAttemptBecomesFailed]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testRetriesStayInsideTheJobConcurrencyLimit]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testRetriesStayInsideTheJobConcurrencyLimit]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testRetryStopsAtTheFirstSuccessAndNumbersAttemptsFromOne]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testRetryStopsAtTheFirstSuccessAndNumbersAttemptsFromOne]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testSingleAttemptPolicyNeverRetries]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorRetryTests testSingleAttemptPolicyNeverRetries]' passed (0.000 seconds).
+Test Suite 'TaskProcessorRetryTests' passed at 2026-10-17 23:12:13.972.
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'TaskProcessorSchedulingTests' started at 2026-10-17 23:12:13.972.
+Test Case '-[TaskProcessorTests.TaskProcessorSchedulingTests testActiveWorkerCountNeverExceedsMaximumConcurrency]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorSchedulingTests testActiveWorkerCountNeverExceedsMaximumConcurrency]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorSchedulingTests testFreedSlotStartsTheNextJobInInputOrder]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorSchedulingTests testFreedSlotStartsTheNextJobInInputOrder]' passed (0.000 seconds).
+Test Suite 'TaskProcessorSchedulingTests' passed at 2026-10-17 23:12:13.973.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'TaskProcessorValidationTests' started at 2026-10-17 23:12:13.973.
+Test Case '-[TaskProcessorTests.TaskProcessorValidationTests testDuplicateIDReportsFirstRepeatedIDAndStartsNoWorker]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorValidationTests testDuplicateIDReportsFirstRepeatedIDAndStartsNoWorker]' passed (0.000 seconds).
+Test Case '-[TaskProcessorTests.TaskProcessorValidationTests testNegativeMaximumConcurrencyIsRejected]' started.
+Test Case '-[TaskProcessorTests.TaskProcessorValidationTests testNegativeMaximumConcurrencyIsRejected]' passed (0.000 seconds).
+Test Suite 'TaskProcessorValidationTests' passed at 2026-10-17 23:12:13.973.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'TaskProcessorTests.xctest' passed at 2026-10-17 23:12:13.973.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'All tests' passed at 2026-10-17 23:12:13.973.
+	 Executed 20 tests, with 0 failures (0 unexpected) in 0.004 (0.011) seconds
+◇ Test run started.
+↳ Testing Library Version: 2084
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
